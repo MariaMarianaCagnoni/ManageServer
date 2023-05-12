@@ -1,0 +1,22 @@
+server:
+  error:
+    include-stacktrace: on_param
+    include-binding-errors: always
+    include-message: always
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/server?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
