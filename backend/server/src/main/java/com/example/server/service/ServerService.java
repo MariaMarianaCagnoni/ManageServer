@@ -10,13 +10,13 @@ import java.util.Collection;
  */
 public interface ServerService {
 
-    Server create(Server server);
+    Server createServer(Server server);
 
-    Collection<Server> list(int limit);
+    Collection<Server> listServers(int limit);
 
-    Server get(Long id);
+    Server getServerById(Long id);
 
-    Server update(Server server);
+    Server updateServer(Server server);
 
-    Boolean delete(Long id);
+    Boolean deleteServerById(Long id);
 }
