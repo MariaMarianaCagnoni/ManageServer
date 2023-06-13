@@ -5,13 +5,21 @@ server:
     include-message: always
 
 spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
   datasource:
-    url: jdbc:mysql://localhost:3306/server?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
-    username: root
-    password: root
+    url: jdbc:h2:file:~/test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+
     show-sql: true
 
 management:
